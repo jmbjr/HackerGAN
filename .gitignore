@@ -1,0 +1,8 @@
+HyperGAN/
+samples/
+saves/
+fashion_mnist/
+conda_activate_hypergan_here.lnk
+__pycache__/
+*.gz
+*ubyte*
