@@ -3,6 +3,8 @@ echo OFF
 set root=C:\ProgramData\Anaconda3
 set targetenv=hypergan_test
 
+echo Trying to create new conda environment %targetenv%
+
 call %root%\Scripts\activate.bat %root%
 
 call conda update conda
@@ -20,6 +22,7 @@ if %thisenv% == %targetenv% (
 	call pip install tensorflow-gpu hyperchamber nashpy pygame natsort opencv-python  
 )
 
+echo Done setting up conda env
 
 
 

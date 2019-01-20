@@ -1,10 +1,12 @@
 echo OFF
 
 set root=C:\ProgramData\Anaconda3
-set newenv=hypergan_test
+set targetenv=hypergan_test
+
+echo Removing conda %targetenv% environment
 
 call %root%\Scripts\activate.bat %root%
-call conda env remove --name %newenv%
+call conda env remove --name %targetenv%
 
-
+echo Done
 

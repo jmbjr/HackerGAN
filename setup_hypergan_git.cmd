@@ -5,6 +5,8 @@ set targetenv=hypergan_test
 set hypergan=https://github.com/HyperGAN/HyperGAN.git
 set hgfolder=HyperGAN
 
+echo Trying to set up %hgfolder% git repo
+
 IF  EXIST %hgfolder% (
 	echo %hgfolder% EXISTS. Please remove %hgfolder% repo folder before running this setup script again.
 	echo You can run remove_hypergan_git.cmd to do this.
@@ -30,6 +32,6 @@ if %thisenv% == %targetenv% (
 	exit
 )
 
-
+echo Done setting up %hgfolder% repo
 
 

@@ -9,6 +9,8 @@ set fashionbase=http://fashion-mnist.s3-website.eu-central-1.amazonaws.com/
 set fashionurl=%fashionbase%%fashionfilegz%
 set fashiondir=fashion_mnist
 
+echo Trying to download and unzip %fashionurl% dataset
+
 IF  EXIST %fashionfilegz% (
 	echo %fashionfilegz% EXISTS. Skipping downloading dataset.
 ) else (
@@ -37,4 +39,4 @@ If EXIST %fashionfile% (
 )
 
 
-
+echo Done setting up dataset

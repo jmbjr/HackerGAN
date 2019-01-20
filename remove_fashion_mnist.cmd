@@ -25,3 +25,5 @@ if Exist %fashiondir% (
 	echo Deleting %fashiondir% folder and images.
 	rmdir %fashiondir% /S
 )
+
+echo Done
