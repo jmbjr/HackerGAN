@@ -8,13 +8,11 @@ set hgfolder=HyperGAN
 echo Trying to set up %hgfolder% git repo
 
 IF  EXIST %hgfolder% (
-	echo %hgfolder% EXISTS. Please remove %hgfolder% repo folder before running this setup script again.
-	echo You can run remove_hypergan_git.cmd to do this.
-	echo Setup will now exit
-	exit
+	echo %hgfolder% EXISTS. Skipping cloning repo
+) else (
+	echo Cloning %hgfolder%
+	git clone %hypergan%
 )
-
-git clone %hypergan%
 
 call %root%\Scripts\activate.bat %root%
 call conda activate %targetenv%
@@ -31,7 +29,7 @@ if %thisenv% == %targetenv% (
 	echo Program will now end. Run setup_conda_env.bat first and verify environment is properly installed.
 	exit
 )
-
+cd ..
 echo Done setting up %hgfolder% repo
 
 
