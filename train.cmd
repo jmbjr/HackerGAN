@@ -1,10 +1,10 @@
+echo OFF
+
 set root=C:\ProgramData\Anaconda3
 set newenv=hypergan_test
 set traincommit=develop
 set fashiondir=fashion_mnist
 set filetype=png
-
-echo OFF
 
 call %root%\Scripts\activate.bat %root%
 call conda activate %newenv%
